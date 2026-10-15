@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/student-result-predictor
+    overwrite: true
+hooks:
+  AfterInstall:
+    - location: scripts/deploy.sh
+      timeout: 600
+      runas: root
